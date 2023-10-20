@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+<body>
+    <ul class="ul">
+        <div class="oval-application">  
+            <p class="text-oval-application">
+                Текущие показания счетчика воды: <div class="box"> {{ meter_reading }} </div> 
+            </p>
+        </div>
+        <div class="card_images_order"><img src="{{ application.images.url }}" alt="Error" width="280" height="250" /></div>
+        <div class="order-text">
+            Показания счетчика для <lower> {{ application.address }} </lower>
+        </div>
+    </ul>
+</body>
+{% endblock %}
