@@ -5,11 +5,12 @@ class Addresses(models.Model):
     address_id = models.IntegerField(primary_key=True)
     town = models.CharField(max_length=50)
     address = models.CharField(max_length=50)
+    apartment = models.IntegerField()
     house_type = models.CharField(max_length=12)
     images = models.ImageField(blank=True, null=True)
     meter_reading = models.IntegerField()
     address_status = models.CharField(max_length=12)
-
+    
     class Meta:
         managed = False
         db_table = 'addresses'
